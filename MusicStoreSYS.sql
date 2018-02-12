@@ -3,16 +3,42 @@
 
 PROMPT Dropping All Tables
 PROMPT
-
-DROP TABLE CDs;
-DROP TABLE OrderItems;
 DROP TABLE Payments;
-DROP TABLE Suppliers;
+DROP TABLE OrderItems;
+DROP TABLE CDs;
 DROP TABLE Orders;
+DROP TABLE Suppliers;
+DROP TABLE Counties;
+
 
 PROMPT
 PROMPT Creating tables
 PROMPT
+
+CREATE TABLE Counties
+(County_Code char(2),
+Name char(15),
+CONSTRAINT pk_Counties PRIMARY KEY (County_Code));
+
+INSERT INTO Counties
+VALUES('AH','Armagh');
+INSERT INTO Counties
+VALUES('CK','Cork');
+INSERT INTO Counties
+VALUES('DW','Down');
+INSERT INTO Counties
+VALUES('DN','Dublin');
+INSERT INTO Counties
+VALUES('LK','Limerick');
+INSERT INTO Counties
+VALUES('KY','Kerry');
+INSERT INTO Counties
+VALUES('TI','Tipperary');
+INSERT INTO Counties
+VALUES('WA','Waterford');
+INSERT INTO Counties
+VALUES('WX','Wexford');
+
 
 CREATE TABLE Suppliers
 (Supp_Id numeric(3)NOT NULL,
@@ -21,10 +47,11 @@ PhoneNo numeric (15),
 Email char (30),
 Street char (25) NOT NULL,
 TownVillage char (20) NOT NULL,
-County char (20) NOT NULL,
+County_Code char (2) NOT NULL,
 Acc_Bal numeric (5,2),
 Status char (1),
-CONSTRAINT pk_Suppliers PRIMARY KEY (Supp_Id));
+CONSTRAINT pk_Suppliers PRIMARY KEY (Supp_Id),
+CONSTRAINT fk_Supp_Counties FOREIGN KEY (County_Code) REFERENCES Counties);
 
 CREATE TABLE CDs
 (CD_ID numeric(5) NOT NULL,
@@ -66,3 +93,5 @@ CREATE TABLE Orders
   CONSTRAINT pk_Payments PRIMARY KEY (PaymentID),
   CONSTRAINT fk_Payments_Suppliers FOREIGN KEY (Supp_Id) REFERENCES Suppliers,
   CONSTRAINT fk_Payments_CDs FOREIGN KEY (CD_ID) REFERENCES CDs); 
+  
+  COMMIT;
