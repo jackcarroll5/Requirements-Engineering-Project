@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{171DDE29-5B8A-4923-8105-B1060404BEE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MusicStoreSYS</RootNamespace>
+    <AssemblyName>MusicStoreSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CD.cs" />
+    <Compile Include="DataConnect.cs" />
+    <Compile Include="frmAnalyCDOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnalyCDOrders.Designer.cs">
+      <DependentUpon>frmAnalyCDOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnalyCDStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnalyCDStock.Designer.cs">
+      <DependentUpon>frmAnalyCDStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreordCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreordCD.Designer.cs">
+      <DependentUpon>frmPreordCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecCD.Designer.cs">
+      <DependentUpon>frmRecCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsNewCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsNewCD.Designer.cs">
+      <DependentUpon>frmInsNewCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdCD.Designer.cs">
+      <DependentUpon>frmUpdCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisCD.Designer.cs">
+      <DependentUpon>frmDisCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryCD.Designer.cs">
+      <DependentUpon>frmQueryCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuppList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuppList.Designer.cs">
+      <DependentUpon>frmSuppList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeregSupp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeregSupp.Designer.cs">
+      <DependentUpon>frmDeregSupp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdSupp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdSupp.Designer.cs">
+      <DependentUpon>frmUpdSupp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuppReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuppReg.Designer.cs">
+      <DependentUpon>frmSuppReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderItems.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplier.cs" />
+    <EmbeddedResource Include="frmAnalyCDOrders.resx">
+      <DependentUpon>frmAnalyCDOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnalyCDStock.resx">
+      <DependentUpon>frmAnalyCDStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeregSupp.resx">
+      <DependentUpon>frmDeregSupp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisCD.resx">
+      <DependentUpon>frmDisCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsNewCD.resx">
+      <DependentUpon>frmInsNewCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreordCD.resx">
+      <DependentUpon>frmPreordCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryCD.resx">
+      <DependentUpon>frmQueryCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecCD.resx">
+      <DependentUpon>frmRecCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuppList.resx">
+      <DependentUpon>frmSuppList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdCD.resx">
+      <DependentUpon>frmUpdCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdSupp.resx">
+      <DependentUpon>frmUpdSupp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuppReg.resx">
+      <DependentUpon>frmSuppReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
